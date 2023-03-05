@@ -7,15 +7,60 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SubjectView: View {
+    var Subject:String
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, queue")
+            
         }
-        .padding()
+    }
+}
+
+
+struct ContentView: View {
+    var body: some View {
+        
+        NavigationView {
+            VStack{
+                NavigationLink(destination: SubjectView(Subject: "English Advanced")) {
+                    Text("English Advanced")
+                            .padding(10)
+                            .font(.title)
+                            .border(Color.green, width: 2)
+                        
+                    .padding(30)
+                }
+                
+                NavigationLink(destination: SubjectView(Subject: "English Advanced")) {
+                    Text("Maths Advanced")
+                        .padding(10)
+                        .font(.title)
+                        .border(Color.orange, width: 2)
+                    
+                        .padding(30)
+                }
+                
+                NavigationLink(destination: SubjectView(Subject: "English Advanced")) {
+                    Text("Software Design and Development")
+                        .padding(10)
+                        .font(.title)
+                        .border(Color.red, width: 2)
+                    
+                        .padding(30)
+                }
+                
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        Text("Subjects")
+                            .font(.largeTitle.bold())
+                            .accessibilityAddTraits(.isHeader)
+                    }
+                }
+        }
+            .foregroundColor(.blue)
+            .padding(40)
+    }
     }
 }
 
