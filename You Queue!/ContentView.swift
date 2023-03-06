@@ -22,29 +22,63 @@ struct ContentView: View {
         
         NavigationView {
             VStack{
-                NavigationLink(destination: SubjectView(Subject: "English Advanced")) {
-                    Text("English Advanced")
-                            .padding(10)
-                            .font(.title)
-                            .border(Color.green, width: 2)
-                        
-                    .padding(30)
-                }
                 
-                NavigationLink(destination: SubjectView(Subject: "English Advanced")) {
-                    Text("Maths Advanced")
+                NavigationLink(destination: SubjectView(Subject: "Business Studies")) {
+                    Text("Business Studies")
                         .padding(10)
                         .font(.title)
-                        .border(Color.orange, width: 2)
+                        .border(Color.yellow, width: 2)
+                        .background(Color.yellow)
+                    
+                        .padding(30)
+                }
+                
+                NavigationLink(destination: SubjectView(Subject: "Economics")) {
+                    Text("Economics")
+                        .padding(10)
+                        .font(.title)
+                        .border(Color.cyan, width: 2)
+                        .background(Color.cyan)
                     
                         .padding(30)
                 }
                 
                 NavigationLink(destination: SubjectView(Subject: "English Advanced")) {
+                    Text("English Advanced")
+                            .padding(10)
+                            .font(.title)
+                            .border(Color.green, width: 2)
+                            .background(Color.green)
+                        
+                    .padding(30)
+                }
+                
+                NavigationLink(destination: SubjectView(Subject: "Maths Advanced")) {
+                    Text("Maths Advanced")
+                        .padding(10)
+                        .font(.title)
+                        .border(Color.orange, width: 2)
+                        .background(Color.orange)
+                    
+                        .padding(30)
+                }
+                
+                NavigationLink(destination: SubjectView(Subject: "PDHPE")) {
+                    Text("PDHPE")
+                        .padding(10)
+                        .font(.title)
+                        .border(Color.mint, width: 2)
+                        .background(Color.mint)
+                    
+                        .padding(30)
+                }
+                
+                NavigationLink(destination: SubjectView(Subject: "SDD")) {
                     Text("Software Design and Development")
                         .padding(10)
                         .font(.title)
                         .border(Color.red, width: 2)
+                        .background(Color.red)
                     
                         .padding(30)
                 }
