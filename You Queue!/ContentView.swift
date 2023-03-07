@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct SubjectView: View {
+    @State private var teacher = "Joe Mama"
     var Subject:String
     var body: some View {
-        VStack {
-            
+        NavigationView{
+            VStack {
+                Text("Hello World")
+            }
         }
+    .navigationBarTitle(Subject, displayMode:.inline)
     }
 }
 
