@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Queue2View: View {
-    var Student:String
+    var student:String
     var body: some View {
         VStack {
             Text("Chaitanya Reddy")
@@ -27,9 +27,9 @@ struct Queue2View: View {
                 .padding(10)
             Text("Ms Tor")
                 .padding(10)
-            Text("Harry Putt")
+            Text(student)
                 .padding(10)
-            NavigationLink(destination: QueueView(Teacher: "Harry Putt")) {
+            NavigationLink(destination: QueueView(Teacher: student)) {
                 Text("Leave Queue")
             }
         }
@@ -61,7 +61,7 @@ struct QueueView: View {
             TextField("Enter your name here", text: $student)
                 .multilineTextAlignment(.center)
                 .padding(10)
-            NavigationLink(destination: Queue2View(Student: "Harry Putt")) {
+            NavigationLink(destination: Queue2View(student: student)) {
                 Text("Join Queue")
                     .padding(10)
             }
