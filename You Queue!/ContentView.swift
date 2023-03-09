@@ -7,6 +7,35 @@
 
 import SwiftUI
 
+struct Queue2View: View {
+    var Student:String
+    var body: some View {
+        VStack {
+            Text("Chaitanya Reddy")
+                .padding(10)
+            Text("Benjamin Abdy")
+                .padding(10)
+            Text("Harris Awan")
+                .padding(10)
+            Text("Rowena Kite")
+                .padding(10)
+            Text("Alexandra Southern")
+                .padding(10)
+            Text("William Milne")
+                .padding(10)
+            Text("Joel Braatz")
+                .padding(10)
+            Text("Ms Tor")
+                .padding(10)
+            Text("Harry Putt")
+                .padding(10)
+            NavigationLink(destination: QueueView(Teacher: "Harry Putt")) {
+                Text("Leave Queue")
+            }
+        }
+    }
+}
+
 
 struct QueueView: View {
     @State private var student = ""
@@ -27,15 +56,15 @@ struct QueueView: View {
                 .padding(10)
             Text("Joel Braatz")
                 .padding(10)
+            Text("Ms Tor")
+                .padding(10)
             TextField("Enter your name here", text: $student)
                 .multilineTextAlignment(.center)
                 .padding(10)
-            Button(action: {
-                Text(student)
-            }, label: {
+            NavigationLink(destination: Queue2View(Student: "Harry Putt")) {
                 Text("Join Queue")
-            })
-            .padding(10)
+                    .padding(10)
+            }
         }
         .navigationBarTitle(Teacher + " - Current Queue", displayMode:.inline)
     }
